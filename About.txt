@@ -1,0 +1,5 @@
+These files are code answers for the website projecteuler.net
+
+Source code found in EulerProject/src
+
+Programmed in Java
