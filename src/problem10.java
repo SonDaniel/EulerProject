@@ -18,7 +18,6 @@ public class problem10 {
             }
         }
 
-        System.out.println("The answer is: " + sum);
     }
 
     private static boolean checkPrime(long number){
