@@ -6,14 +6,9 @@
 public class problem5 {
     public static void main(String[] args){
         int number = 2520;
-        boolean isDivisible = false;
-
-        do {
+        while(!checkDiv(number)) {
             number++;
-            isDivisible = checkDiv(number);
-
-        }while(!isDivisible);
-
+        }
         System.out.println("The answer is: " + number);
     }
 
