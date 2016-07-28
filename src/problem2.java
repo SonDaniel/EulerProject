@@ -10,9 +10,7 @@ public class problem2 {
     }
 
     public static void problem2(){
-        int firstNum = 1; //known first value of fibonacci
-        int nextNum = 2; //known second value of fibonacci
-        int temp;
+        int firstNum = 1, nextNum = 2, temp;
         int sum = 2; //taking account for first even number being 2
         while(sum < 4000000)
         {
@@ -20,8 +18,7 @@ public class problem2 {
             firstNum = nextNum;
             nextNum = temp;
 
-            if(temp % 2 == 0) //checking if even number
-            {
+            if(temp % 2 == 0) {
                 sum += temp;
             }
         }

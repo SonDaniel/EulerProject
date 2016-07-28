@@ -12,10 +12,8 @@ public class problem3 {
         do
         {
             count++;
-            if(checkPrime(count))
-            {
-                if(testNumber % count == 0)
-                {
+            if(checkPrime(count)) {
+                if(testNumber % count == 0) {
                     largestPrimeFactor = count;
                     System.out.println(largestPrimeFactor);
                 }
