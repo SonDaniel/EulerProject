@@ -7,49 +7,21 @@
  There exists exactly one Pythagorean triplet for which a + b + c = 1000.
  Find the product abc.
  */
-
 import java.lang.Math;
 
 public class problem9 {
-
     public static void main(String[] args) {
-        double a = 1.0,b = 2.0,c;
-        final double max = 1000;
-        boolean found = false;
+        System.out.println("Answer is: " + pythagorTrip(1000));
+    }
 
-        while(!found) {
-            c = Math.pow(a, 2) + Math.pow(b, 2);
-            if(isPerfectSquare(c)) {
-
+    public static int pythagorTrip(int num) {
+        double a;
+        for (int b = 1; b < num/2; b++) {
+            a = (500000 - (1000 * b))/(1000 - b);
+            if (a < b && (Math.pow(a,2) + Math.pow(b,2) == Math.pow(num-a-b,2))) {
+                return (int) (a*b*(num-a-b));
             }
         }
-
-//
-//        while(!found) {
-//            if(!isPerfectSquare(a)) {
-//                a++;
-//            } else if(!isPerfectSquare(b)) {
-//                b++;
-//            } else if(!isPerfectSquare(c)) {
-//                c++;
-//            } else {
-//                if(a < b && b < c) { //check if condition is true a < b < c
-//                    if(a + b + c == max) {
-//                        found = true;
-//                    }
-//                }
-//            }
-//        }
-//
-//        System.out.println("a = " + a);
-//        System.out.println("b = " + b);
-//        System.out.println("c = " + c);
-//        System.out.println("The product: " + (a * b * c));
+        return -1;
     }
-
-    public static boolean isPerfectSquare(double num) {
-        return num != 0.0 && (num == Math.sqrt(num) * 2);
-    }
-
-
 }
