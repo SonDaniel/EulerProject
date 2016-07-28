@@ -8,8 +8,7 @@ public class problem5 {
         int number = 2520;
         boolean isDivisible = false;
 
-        do
-        {
+        do {
             number++;
             isDivisible = checkDiv(number);
 
@@ -18,21 +17,16 @@ public class problem5 {
         System.out.println("The answer is: " + number);
     }
 
-    private static boolean checkDiv(int number){
+    private static boolean checkDiv(int number) {
         boolean isDivisible = false;
-        for(int ii = 1; ii <= 20; ii++)
-        {
-            if(number % ii == 0)
-            {
+        for(int ii = 1; ii <= 20; ii++) {
+            if(number % ii == 0) {
                 isDivisible = true;
-            }
-            else
-            {
+            } else {
                 isDivisible = false;
                 break;
             }
         }
-
         return isDivisible;
     }
 
