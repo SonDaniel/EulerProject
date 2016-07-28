@@ -5,27 +5,19 @@
  *
  */
 public class problem1 {
-
     public static void main(String args[]){
-
         int sum = 0;
 
         for(int ii = 0; ii < 1000; ii++){
-            if(ii % 3 == 0 && ii % 5 == 0)
-            {
+            if(ii % 3 == 0 && ii % 5 == 0) {
                 sum += ii;
-            }
-            else if (ii % 5 == 0)
-            {
+            } else if (ii % 5 == 0) {
                 sum += ii;
-            }
-            else if(ii % 3 == 0)
-            {
+            } else if(ii % 3 == 0) {
                 sum += ii;
             }
         }
 
         System.out.println("The answer is" + sum);
     }
-
 }
