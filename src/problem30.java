@@ -11,5 +11,19 @@
  Find the sum of all the numbers that can be written as the sum of fifth powers of their digits.
  */
 public class problem30 {
-
+    public static void main(String[] args) {
+        int sum = 0;
+        for(int ii = 1; ii <= 99999; ii++) {
+            String numString = Integer.toString(ii);
+            int checkNum = 0;
+            for(int jj = 0; jj < numString.length(); jj++) {
+                int tempNum = (int) Math.pow(Character.getNumericValue(numString.charAt(jj)), 5);
+                checkNum = checkNum + tempNum;
+            }
+            if(checkNum == ii) {
+                sum = sum + checkNum;
+            }
+        }
+        System.out.println("The answer is: " + sum);
+    }
 }
