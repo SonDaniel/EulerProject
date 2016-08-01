@@ -12,16 +12,17 @@
  */
 public class problem30 {
     public static void main(String[] args) {
-        int sum = 0;
-        for(int ii = 1; ii <= 99999; ii++) {
+        double sum = 0;
+        for(int ii = 2; ii <= 355000; ii++) {
             String numString = Integer.toString(ii);
-            int checkNum = 0;
+            double checkNum = 0;
             for(int jj = 0; jj < numString.length(); jj++) {
-                int tempNum = (int) Math.pow(Character.getNumericValue(numString.charAt(jj)), 5);
+                double tempNum = Math.pow(Character.getNumericValue(numString.charAt(jj)), 5);
                 checkNum = checkNum + tempNum;
             }
             if(checkNum == ii) {
                 sum = sum + checkNum;
+                System.out.println(checkNum);
             }
         }
         System.out.println("The answer is: " + sum);
